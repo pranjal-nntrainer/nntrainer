@@ -31,6 +31,7 @@
 #include <lora_train.h>
 #include <transformer.h>
 
+#include <dataset.h>
 #include <model.h>
 
 using json = nlohmann::json;
@@ -115,25 +116,26 @@ int main(int argc, char *argv[]) {
     std::cout << "Training samples: " << data_gen.getNumSamples() << std::endl;
 
     if (data_gen.getNumSamples() == 0) {
-      std::cerr << "Error: Not enough training data (need > seq_len tokens)"
+      std::cerr << "Error: Not enough training data (need > 0 lines)"
                 << std::endl;
       return 1;
     }
 
-    // TODO: Set dataset and run training
-    // model->setDataset(...)
-    // model->train(...)
-    // model->save(output_path)
+    // Set dataset and run training
+    auto dataset_train = ml::train::createDataset(
+      ml::train::DatasetType::GENERATOR,
+      causallm::TrainingDataGenerator::dataCb, &data_gen);
 
-    std::cout << "LoRA training setup complete." << std::endl;
-    std::cout << "Note: Full training loop requires integrating with "
-                 "nntrainer's model->train() API."
-              << std::endl;
+    model.setDataset(ml::train::DatasetModeType::MODE_TRAIN, dataset_train);
+
+    std::cout << "Starting LoRA training..." << std::endl;
+    model.train();
+
+    std::cout << "LoRA training completed." << std::endl;
 
     // Save LoRA weights
     model.save_weight(output_path);
     std::cout << "LoRA weights saved to: " << output_path << std::endl;
-
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << std::endl;
     return 1;

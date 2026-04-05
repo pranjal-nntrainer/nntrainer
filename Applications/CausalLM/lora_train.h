@@ -75,7 +75,7 @@ public:
 private:
   tokenizers::Tokenizer *tokenizer_;
   unsigned int seq_len_;
-  std::vector<int> all_token_ids_;
+  std::vector<std::vector<int>> samples_;
   unsigned int current_idx_;
 
   void reset();
