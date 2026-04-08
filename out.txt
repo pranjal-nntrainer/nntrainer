@@ -1,0 +1,1166 @@
+=== CausalLM Full Model Training ===
+Model dir: /nntrainerPranjal/nntrainer/Applications/CausalLM/res/qwen3/qwen3-4b
+Learning rate: 0.0001
+Epochs: 1
+Train data: /nntrainerPranjal/nntrainer/Applications/CausalLM/sst2_data/train.txt
+Output: model_weights.bin
+Loading initial weights from: /nntrainerPranjal/nntrainer/Applications/CausalLM/res/qwen3/qwen3-4b/nntr_qwen3_4b_fp32.bin
+[TrainingData] Loaded /nntrainerPranjal/nntrainer/Applications/CausalLM/sst2_data/train.txt line by line, total: 67349 samples.
+Training samples: 67349
+Starting full model training...
+TieWordEmbedding::forwarding() entered - mode: embedding
+TieWordEmbedding::incremental_forwarding() entered - mode: embedding, from: 0, to: 1024
+TieWordEmbedding::incremental_forwarding_embedding() entered
+embedding0 : 
+ input:<N9nntrainer6TensorE at 0x60bff66d26e0>
+data addr: 0x60bff70ea1b0
+Shape: 1:1:1:1024 [ FP32 : NCHW ]
+[84564 25 10265 ... 0 0 0]
+
+ weight: <N9nntrainer6TensorE at 0x60bff35ed070>
+data addr: 0x763ef32a4a10
+Shape: 1:1:151936:2560 [ FP32 : NCHW ]
+[1 1 1 ... 1 1 1]
+
+ hidden: <N9nntrainer6TensorE at 0x60bff67233c0>
+data addr: 0x76300fe00250
+Shape: 1:1:1024:2560 [ FP32 : NCHW ]
+[1 1 1 ... 1 1 1]
+
+Entering forwarding
+layer0_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763011201250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00645075 0.0345578 -0.022383 ... -0.0109492 -0.0355017 0.0226142]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763012201250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00713219 0.0407426 -0.0310605 ... 0.00173409 0.000741219 -0.00761458]
+gamma:<N9nntrainer6TensorE at 0x60bff6601ad0>
+data addr: 0x763b29e7b210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0239258 0.0255127 0.0300293 ... -0.00363159 -0.000478745 -0.00772095]
+
+layer0_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763013201250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0389392 0.0256372 0.035476 ... 0.0190418 0.0389296 0.0348137]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763013601250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.0144282 0.0132491 -0.0231767 ... -0.0182653 0.0231266 -0.00207527]
+gamma:<N9nntrainer6TensorE at 0x60bff64d5930>
+data addr: 0x763b2947b010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00927734 0.0129395 -0.0163574 ... -0.0214844 0.0133057 -0.00133514]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer1_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76302ba03250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0103011 0.0356632 0.0262588 ... -0.0021164 -0.0398854 -0.00275795]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76302ca03250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00367234 0.0381417 0.0134178 ... 0.000404824 0.00417167 -0.00401242]
+gamma:<N9nntrainer6TensorE at 0x60bff64d4c80>
+data addr: 0x763b11378610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0109863 0.032959 0.0157471 ... -0.00619507 -0.00338745 0.0471191]
+
+layer1_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76302da03250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.013989 0.00390191 0.0244508 ... 0.00119805 -0.0451934 -0.0423018]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76302de03250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00236236 0.00191462 0.00449265 ... -0.000184201 0.0269089 -0.0579969]
+gamma:<N9nntrainer6TensorE at 0x60bff657b550>
+data addr: 0x763b10978410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00485229 0.0140991 0.00527954 ... -0.00479126 -0.0185547 0.0427246]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer2_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763046205250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0491387 0.0145767 0.0393971 ... 0.0196566 0.00446758 0.00747023]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763047205250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.0352425 0.01488 -0.0195017 ... -0.0322521 -0.000899001 0.00154176]
+gamma:<N9nntrainer6TensorE at 0x60bff67411d0>
+data addr: 0x763b49282c10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0198975 0.0283203 -0.0137329 ... -0.0388184 -0.00476074 0.00488281]
+
+layer2_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763048205250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0123833 0.0133769 0.0076852 ... 0.0267259 0.00641051 -0.050399]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763048605250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.0170361 -0.00248964 0.00194057 ... -0.0396697 -0.00327085 0.0302794]
+gamma:<N9nntrainer6TensorE at 0x60bff66f5d20>
+data addr: 0x763b49c82e10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0385742 -0.00521851 0.00708008 ... -0.0410156 -0.0140991 -0.0166016]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer3_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763060a07250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0409161 0.0513317 -0.014344 ... -0.030066 -0.0630594 0.0162078]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763061a07250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00145261 -0.00290779 -0.00124315 ... 0.00529589 0.0146509 -0.00387074]
+gamma:<N9nntrainer6TensorE at 0x60bff67b1360>
+data addr: 0x763ae1b6b610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0010376 -0.00165558 0.00253296 ... -0.00497437 -0.00656128 -0.00674438]
+
+layer3_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763062a07250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.00873726 -0.000912222 -0.00437319 ... -0.013017 -0.00683519 -0.029828]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763062e07250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00664305 -0.00105056 0.00055926 ... 0.00167382 -0.00690353 0.0239894]
+gamma:<N9nntrainer6TensorE at 0x60bff676b280>
+data addr: 0x763ae116b410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0166016 0.0251465 -0.00279236 ... -0.0025177 0.0197754 -0.0157471]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer4_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76307b209250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0124524 0.040463 -0.0205918 ... -0.037019 -0.0401333 0.000304881]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76307c209250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00153615 -0.021686 0.00889695 ... -0.0112758 0.00399491 0.000245214]
+gamma:<N9nntrainer6TensorE at 0x60bff663a980>
+data addr: 0x763ac9068a10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00318909 -0.013855 -0.0111694 ... 0.00933838 -0.00305176 0.0246582]
+
+layer4_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76307d209250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.00137125 0.00080666 0.0371546 ... 0.0330163 -0.0011477 0.0374347]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76307d609250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.000469679 0.000162026 0.00388855 ... -0.00452425 0.000632291 0.0272188]
+gamma:<N9nntrainer6TensorE at 0x60bff658e320>
+data addr: 0x763ac8668810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0098877 0.00579834 0.00302124 ... -0.00299072 -0.0120239 0.0158691]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer5_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763095a0b250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0191747 -0.00606792 0.00201239 ... -0.0230664 -0.0157736 0.0210472]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763096a0b250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.00210253 0.00481207 -6.57527e-05 ... 0.0157915 0.0181581 -0.00300192]
+gamma:<N9nntrainer6TensorE at 0x60bff649ba80>
+data addr: 0x763b00f73010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00302124 -0.0218506 -0.000900269 ... -0.0164795 -0.02771 -0.00343323]
+
+layer5_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763097a0b250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0296241 -0.0276026 -0.0193778 ... -0.00443937 -0.0196625 -0.0105724]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763097e0b250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.000443739 0.00836775 0.0366613 ... -0.00525427 0.0214465 -0.00732994]
+gamma:<N9nntrainer6TensorE at 0x60bff64653d0>
+data addr: 0x763b01973210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00028801 -0.00582886 -0.036377 ... 0.0249023 -0.0229492 0.0145874]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer6_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630b020d250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0315732 -0.0605064 -0.0438715 ... 0.0647687 0.0326276 -0.0549815]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7630b120d250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.0178004 -0.0973969 -0.0428154 ... 0.037047 0.0442571 0.035043]
+gamma:<N9nntrainer6TensorE at 0x60bff61e7ad0>
+data addr: 0x763ba3797e10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0177002 0.0505371 0.0306396 ... 0.0170898 0.0405273 -0.019043]
+
+layer6_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630b220d250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0262891 0.00270843 -0.053135 ... 0.0162732 0.0277313 -0.00899096]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7630b260d250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000365232 -0.0029959 0.00261885 ... -0.0107906 -0.00188514 -0.0115805]
+gamma:<N9nntrainer6TensorE at 0x60bff63042d0>
+data addr: 0x763ba4198010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.000320435 -0.0255127 -0.00113678 ... -0.0169678 -0.0017395 0.032959]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer7_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630caa0f250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0191352 0.0206021 -0.0271002 ... 0.0296415 0.0158505 0.0119841]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7630cba0f250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.00169271 -0.0318932 0.013285 ... 0.000436578 -0.00355509 -0.0108011]
+gamma:<N9nntrainer6TensorE at 0x60bff5e58e10>
+data addr: 0x763bbb89d210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00292969 -0.0512695 -0.0162354 ... 0.000434875 -0.00662231 -0.0266113]
+
+layer7_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630cca0f250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.00156825 0.00266102 -0.0236987 ... 0.0437534 -0.00205204 0.0440177]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7630cce0f250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000324865 -0.00107524 -0.0258188 ... -0.0307867 -0.00174437 -0.019067]
+gamma:<N9nntrainer6TensorE at 0x60bff62c3370>
+data addr: 0x763ba0f95410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00494385 -0.00964355 0.026001 ... -0.0211182 0.0255127 -0.0130005]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer8_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630e5211250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00670749 -0.0107936 0.0418825 ... -0.0481618 0.022968 -0.0282121]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7630e6211250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.000124173 -0.0207603 0.0185279 ... 0.0469087 -0.0017784 0.0171307]
+gamma:<N9nntrainer6TensorE at 0x60bff6247790>
+data addr: 0x763bd98a2410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.000587463 0.0610352 0.0140381 ... -0.0291748 -0.00231934 -0.0181885]
+
+layer8_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630e7211250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0223206 -0.0277906 -0.0369559 ... -0.0222778 0.00541209 0.0148779]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7630e7611250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.015287 -0.000370754 -0.0162831 ... -0.00810639 0.00140495 -0.00663509]
+gamma:<N9nntrainer6TensorE at 0x60bff63630b0>
+data addr: 0x763bda2a2610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0183105 0.000356674 0.0117798 ... 0.0100098 0.00714111 -0.0122681]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer9_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7630ffa13250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00482173 0.0128015 0.0206909 ... -0.0192229 -0.0514093 -0.0372552]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763100a13250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00347362 0.00652236 -0.0114246 ... -0.00864811 0.0273764 0.0247989]
+gamma:<N9nntrainer6TensorE at 0x60bff6309970>
+data addr: 0x763b7178ae10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0185547 0.0131226 -0.0142212 ... 0.0119629 -0.0141602 -0.0177002]
+
+layer9_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763101a13250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0194145 -0.0135777 -0.00470963 ... 0.0310971 0.00753809 0.00397887]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763101e13250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00643551 -0.0218418 -0.00290418 ... -0.0119607 -0.000700263 -0.00133151]
+gamma:<N9nntrainer6TensorE at 0x60bff6437910>
+data addr: 0x763b70d8ac10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00830078 0.0402832 0.0154419 ... -0.0108032 -0.00260925 -0.00939941]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer10_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76311a215250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0361998 -0.00587636 -0.0193418 ... 0.0244338 0.0273291 0.0502682]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76311b215250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.0349502 -0.0106058 -0.039225 ... 0.0296184 0.0261156 0.0600451]
+gamma:<N9nntrainer6TensorE at 0x60bff6483b10>
+data addr: 0x763b5be85810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.024292 0.0454102 0.0510254 ... 0.0334473 0.0263672 0.032959]
+
+layer10_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76311c215250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.00587239 -0.00618461 0.0226523 ... -0.0298415 -0.0622045 -0.00578509]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76311c615250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00366718 -0.0041492 0.0218878 ... 0.0154212 0.00446464 -0.010039]
+gamma:<N9nntrainer6TensorE at 0x60bff63cef80>
+data addr: 0x763b7038aa10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0180664 0.0194092 0.0279541 ... -0.0148315 -0.00205994 0.0498047]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer11_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763134a17250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0248543 0.00936855 0.0523592 ... -0.0188021 0.0331752 -0.028172]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763135a17250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.00313606 0.000392713 -0.041147 ... 0.00543316 0.00317514 0.0262369]
+gamma:<N9nntrainer6TensorE at 0x60bff640cf10>
+data addr: 0x763b97492810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00454712 0.00151062 -0.0283203 ... -0.00958252 0.00317383 -0.0308838]
+
+layer11_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763136a17250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0527056 -0.00503722 0.015213 ... -0.0847156 0.0266207 0.000102725]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763136e17250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.017191 -0.000771359 -0.00642968 ... 0.0338903 -0.00477241 5.71238e-06]
+gamma:<N9nntrainer6TensorE at 0x60bff631aa00>
+data addr: 0x763b97e92a10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0130005 0.00610352 -0.0168457 ... -0.0147095 -0.0065918 0.00204468]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer12_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76314f219250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.00531266 -0.00710509 0.0107971 ... 0.00800379 0.0269828 0.0192556]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763150219250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.000115242 0.00456468 0.00414602 ... -0.00107044 -0.0111676 0.0137813]
+gamma:<N9nntrainer6TensorE at 0x60bff63b9420>
+data addr: 0x763a0883c210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.000717163 -0.0212402 0.0126953 ... -0.0045166 -0.0139771 0.0241699]
+
+layer12_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763151219250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0614668 -0.056476 -0.0582938 ... -0.0219602 0.0326206 0.0636884]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763151619250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00513233 0.0122413 -0.0429125 ... 0.014727 0.0110889 0.0154642]
+gamma:<N9nntrainer6TensorE at 0x60bff6332fb0>
+data addr: 0x763a07e3c010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0037384 -0.00970459 0.032959 ... -0.0177002 0.00897217 0.00640869]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer13_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763169a1b250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0111559 0.035143 -0.0398805 ... 0.00911195 0.0369591 -0.00815781]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76316aa1b250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00456206 -0.00204706 -0.0323643 ... -0.00431646 0.0116951 -0.00794279]
+gamma:<N9nntrainer6TensorE at 0x60bff6328e80>
+data addr: 0x7639f2f36c10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0157471 -0.00224304 0.03125 ... -0.0154419 0.0103149 0.0317383]
+
+layer13_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76316ba1b250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0219158 0.0385619 -0.0294045 ... 0.0327208 0.00721244 0.0487836]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76316be1b250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000148192 0.0311738 -0.0428908 ... 0.00348947 0.00190618 0.0278972]
+gamma:<N9nntrainer6TensorE at 0x60bff640e810>
+data addr: 0x763a0743be10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.000187874 0.0224609 0.0405273 ... 0.00421143 0.010437 0.022583]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer14_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76318421d250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.00448471 -0.00304914 -0.00502077 ... -0.0027961 -0.0281421 -0.0454395]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76318521d250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.000945455 0.000651345 0.00185465 ... 0.000580983 -0.000919758 0.00237023]
+gamma:<N9nntrainer6TensorE at 0x60bff6211c40>
+data addr: 0x763a2e543c10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00689697 -0.00698853 -0.012085 ... -0.00732422 0.00115204 -0.00183868]
+
+layer14_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76318621d250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0178817 -0.0212024 0.0323169 ... 0.0182026 0.00208634 0.01829]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76318661d250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.0128366 0.00644246 0.0186574 ... -0.00811138 -1.64476e-05 -0.0101037]
+gamma:<N9nntrainer6TensorE at 0x60bff61f5450>
+data addr: 0x763a2ef43e10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0230713 -0.00976562 0.0185547 ... -0.0147705 -0.000261307 -0.0183105]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer15_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76319ea1f250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0254694 0.0419148 0.011447 ... -0.00790422 0.0244929 0.0187765]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76319fa1f250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.0102778 0.0170723 -0.00604393 ... -0.0137065 -0.00292763 -0.0241184]
+gamma:<N9nntrainer6TensorE at 0x60bff6250be0>
+data addr: 0x7639c052c610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0130615 0.0131836 -0.0170898 ... 0.0593262 -0.00408936 -0.0439453]
+
+layer15_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631a0a1f250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.00712689 -0.00755418 0.0170708 ... 0.0197657 0.000645383 -0.0155245]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631a0e1f250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000976741 0.00384112 -0.000902764 ... 0.0113186 -0.000255506 0.00235966]
+gamma:<N9nntrainer6TensorE at 0x60bff63965f0>
+data addr: 0x7639bfb2c410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00421143 -0.015625 -0.00162506 ... 0.0197754 -0.0136719 -0.00524902]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer16_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631b9221250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0188835 -0.00333732 -0.0656379 ... -0.00772419 0.0262496 0.0199728]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631ba221250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.00268056 0.000575258 -0.0135527 ... -0.00923109 -0.0196066 -0.00742526]
+gamma:<N9nntrainer6TensorE at 0x60bff645c320>
+data addr: 0x7639aac27010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00469971 -0.00570679 0.00683594 ... 0.0429688 -0.0268555 -0.0133667]
+
+layer16_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631bb221250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0418372 0.100123 0.0157373 ... 0.0225827 0.0282031 0.00896627]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631bb621250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00348424 0.0471754 -0.00512439 ... 0.013908 -0.00383421 -0.00140988]
+gamma:<N9nntrainer6TensorE at 0x60bff6360570>
+data addr: 0x7639bf12c210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00338745 0.019165 -0.0132446 ... 0.0344238 -0.00759888 -0.00878906]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer17_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631d3a23250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0311882 -0.00878992 -0.00705749 ... -0.00704138 -0.004754 -0.00223021]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631d4a23250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.0315713 -0.000801957 -0.00487522 ... -0.000347421 -0.00352204 0.000455953]
+gamma:<N9nntrainer6TensorE at 0x60bff64082d0>
+data addr: 0x7639e6234010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0284424 0.00256348 0.0194092 ... 0.00148773 0.0223389 -0.00616455]
+
+layer17_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631d5a23250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0223335 -0.0277491 0.000645013 ... -0.00280057 -0.00457808 0.0129492]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631d5e23250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00329962 0.00846059 0.000609408 ... -0.00193635 -0.000218723 0.0141805]
+gamma:<N9nntrainer6TensorE at 0x60bff62bfa50>
+data addr: 0x7639e6c34210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00479126 -0.0098877 0.0306396 ... 0.0196533 0.00135803 0.0311279]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer18_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631ee225250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0034149 0.0586153 -0.0158453 ... 0.00173624 0.0294277 0.0314213]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631ef225250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.00188363 -0.0747407 -0.00879685 ... 0.00112025 0.0136159 -0.0226744]
+gamma:<N9nntrainer6TensorE at 0x60bff61da030>
+data addr: 0x763a98e5ba10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0187988 -0.043457 0.0189209 ... 0.0185547 0.0133057 -0.020752]
+
+layer18_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7631f0225250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.00434949 0.0232778 0.0387962 ... -0.0135128 0.0699304 0.0222297]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7631f0625250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000747868 0.0100435 -0.0135072 ... 0.000740049 -0.0550575 -0.00703003]
+gamma:<N9nntrainer6TensorE at 0x60bff62c8670>
+data addr: 0x763a9845b810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00491333 0.0123291 -0.00994873 ... -0.00202942 -0.0291748 -0.0117188]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer19_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763208a27250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00213791 0.00884674 -0.00487153 ... -0.0327182 -0.00609194 0.0344983]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763209a27250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.000165873 0.00432952 0.00376802 ... -0.0294368 0.0048822 0.00322773]
+gamma:<N9nntrainer6TensorE at 0x60bff61ec9b0>
+data addr: 0x763a83556410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00198364 0.0125122 -0.0197754 ... 0.0290527 -0.0258789 0.00302124]
+
+layer19_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76320aa27250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.000978979 -0.0102292 0.0156289 ... 0.019417 -0.00139381 0.051803]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76320ae27250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000508419 -0.00219646 0.00323885 ... 0.00549453 -0.000658192 0.0140988]
+gamma:<N9nntrainer6TensorE at 0x60bff63ae730>
+data addr: 0x763a97a5b610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.019043 0.00787354 0.00759888 ... 0.00958252 0.0159912 0.00921631]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer20_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763223229250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.00398595 -0.00621449 0.0108454 ... -0.0124857 -0.0258916 -0.0167184]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763224229250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00227143 -0.000594448 0.00799033 ... -0.00286703 -0.0293772 9.9805e-05]
+gamma:<N9nntrainer6TensorE at 0x60bff640def0>
+data addr: 0x763abeb63410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0170898 0.00286865 0.0220947 ... 0.00726318 0.0358887 -0.000188828]
+
+layer20_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763225229250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0438181 0.0210634 0.0140673 ... 0.0464763 -0.0116579 0.00132756]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763225629250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.0330337 -0.00821704 0.0118092 ... 0.0870848 -0.00216556 0.000318598]
+gamma:<N9nntrainer6TensorE at 0x60bff6235dd0>
+data addr: 0x763abf563610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0279541 -0.0144653 0.0311279 ... 0.0495605 0.00491333 0.00634766]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer21_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76323da2b250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00569784 -0.0234087 0.000278947 ... 0.0448443 -0.00641084 -0.0105181]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76323ea2b250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00488788 0.0148218 -0.000216505 ... 0.0178381 -0.00700469 0.000602427]
+gamma:<N9nntrainer6TensorE at 0x60bff642d780>
+data addr: 0x763a50b4be10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0256348 -0.0189209 -0.0231934 ... 0.00964355 0.0264893 -0.00138855]
+
+layer21_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76323fa2b250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0374198 0.0389527 0.0778295 ... 0.0240435 0.0320848 0.0726574]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76323fe2b250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.0109563 -0.000538576 0.02954 ... 0.00453249 -0.0337751 0.0107812]
+gamma:<N9nntrainer6TensorE at 0x60bff62e0510>
+data addr: 0x763a5014bc10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0164795 -0.000778198 0.0213623 ... 0.00616455 -0.0344238 0.00485229]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer22_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76325822d250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0499986 0.0338559 0.0202753 ... 0.0308703 0.0828004 -0.00439438]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76325922d250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.0296839 0.0135574 0.00438273 ... -0.0146141 -0.0780681 -0.00335984]
+gamma:<N9nntrainer6TensorE at 0x60bff66edfc0>
+data addr: 0x763a3b246810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0181885 0.0122681 0.00662231 ... -0.0145874 -0.0290527 0.0235596]
+
+layer22_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76325a22d250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0663049 0.105515 0.0971185 ... -0.00625511 0.0387882 0.0640673]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76325a62d250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000763967 -0.0121574 0.0355193 ... 0.00109067 -0.00842221 -0.0105387]
+gamma:<N9nntrainer6TensorE at 0x60bff6618aa0>
+data addr: 0x763a4f74ba10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.000946045 -0.00946045 0.0300293 ... -0.00646973 -0.00805664 -0.00610352]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer23_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763272a2f250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0149593 0.0100411 0.00478481 ... 0.0052665 -0.00363555 -0.00115619]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763273a2f250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.00572748 -0.00343079 -0.00133919 ... 0.00297953 0.000600272 -0.000338288]
+gamma:<N9nntrainer6TensorE at 0x60bff671e300>
+data addr: 0x763a76853810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00964355 -0.00860596 -0.00704956 ... 0.0142212 -0.00415039 0.00735474]
+
+layer23_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763274a2f250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.065179 -0.100589 -0.0568711 ... -0.0539597 -0.0246769 -0.0793467]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763274e2f250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00622297 0.023536 0.0226368 ... -0.0241906 0.000666195 0.00632894]
+gamma:<N9nntrainer6TensorE at 0x60bff67ca1b0>
+data addr: 0x763a77253a10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00866699 -0.0212402 -0.0361328 ... 0.0334473 -0.00201416 -0.00595093]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer24_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76328d231250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0206976 0.0143007 0.0171166 ... 0.036729 0.00996134 0.0154031]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76328e231250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.0091757 0.00539561 -0.012028 ... -0.0201698 -0.0113713 0.00185658]
+gamma:<N9nntrainer6TensorE at 0x60bff67cd6e0>
+data addr: 0x763e5a582a10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0114746 0.00976562 -0.0181885 ... -0.0155029 -0.0322266 0.00340271]
+
+layer24_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76328f231250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.00868808 0.0359504 0.0261004 ... 0.0487363 0.0774416 0.0724386]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76328f631250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00724993 0.0122665 -0.0103092 ... 0.0108537 0.019424 -0.00195543]
+gamma:<N9nntrainer6TensorE at 0x60bff677a840>
+data addr: 0x763e59b82810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0274658 0.0112305 -0.0130005 ... 0.012085 0.0136108 -0.00146484]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer25_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632a7a33250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0207701 -0.0130328 0.0344911 ... 0.00329067 -0.0121303 -0.0200313]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632a8a33250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.0188661 0.0123836 0.0287305 ... 0.00133889 0.00802699 -0.0136136]
+gamma:<N9nntrainer6TensorE at 0x60bff6086b10>
+data addr: 0x763e44c7d410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0264893 -0.02771 0.024292 ... 0.0111084 -0.0180664 0.0185547]
+
+layer25_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632a9a33250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0336884 -0.0496489 -0.0535016 ... -0.0501341 -0.0277196 -0.0394172]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632a9e33250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.0207822 -0.039186 -0.00855458 ... 0.0128108 0.00987514 0.00933713]
+gamma:<N9nntrainer6TensorE at 0x60bff5935ab0>
+data addr: 0x763e59182610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0332031 0.0424805 0.00860596 ... -0.00836182 -0.0116577 -0.00775146]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer26_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632c2235250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00347477 -0.00176232 0.0217731 ... 0.0261998 0.0378973 0.038465]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632c3235250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.000670694 0.000254549 -0.00228464 ... -0.00213152 -0.0208462 -0.0449013]
+gamma:<N9nntrainer6TensorE at 0x60bff5ea15c0>
+data addr: 0x763e8028a410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00454712 -0.00340271 -0.00247192 ... -0.00236511 -0.0159912 -0.0339355]
+
+layer26_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632c4235250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0195426 -0.0828808 -0.0227919 ... -0.0623992 -0.0582158 -0.0578236]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632c4635250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00453845 0.00923107 0.00396979 ... 0.00128749 0.00828273 -0.00311626]
+gamma:<N9nntrainer6TensorE at 0x60bff6093730>
+data addr: 0x763e80c8a610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0119629 -0.0057373 -0.00897217 ... -0.00102234 -0.00704956 0.00267029]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer27_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632dca37250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0241786 0.00816887 -0.0164618 ... 0.0328528 -0.0117475 -0.0135217]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632dda37250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[-0.0023266 -0.00586705 0.00744667 ... 0.00391864 -0.00201883 0.00324098]
+gamma:<N9nntrainer6TensorE at 0x60bff58d7c40>
+data addr: 0x763e12272e10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00296021 -0.0220947 -0.013916 ... 0.0032196 0.00463867 -0.00646973]
+
+layer27_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632dea37250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.00873149 0.0322978 0.00456046 ... -0.0655616 -0.010995 0.0347281]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632dee37250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.000592878 0.00628561 -0.00267235 ... -0.0416963 0.00493602 -0.024252]
+gamma:<N9nntrainer6TensorE at 0x60bff5e900e0>
+data addr: 0x763e11872c10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00193787 0.0055542 -0.0167236 ... 0.0186768 -0.0131836 -0.0205078]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer28_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632f7239250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0114103 0.0200755 -0.0251749 ... 0.028334 0.0276677 0.0179516]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632f8239250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00604262 0.00125452 1.46861e-05 ... 0.0233298 -0.0242381 -0.00522063]
+gamma:<N9nntrainer6TensorE at 0x60bff5a31020>
+data addr: 0x763dfc96d810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0152588 0.00180054 -1.68085e-05 ... 0.0209961 -0.0223389 -0.00741577]
+
+layer28_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7632f9239250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0119986 -0.0178407 -0.015132 ... -0.0145892 -0.00338653 -0.0267726]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7632f9639250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00226163 0.0136163 -0.0055995 ... -0.00329542 0.00226767 0.0363459]
+gamma:<N9nntrainer6TensorE at 0x60bff599d9c0>
+data addr: 0x763e10e72a10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00497437 -0.0201416 0.00976562 ... 0.00601196 -0.0178223 -0.0361328]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer29_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763311a3b250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.00951091 -0.000855098 0.0289212 ... 0.0217953 -0.0163582 -0.0132216]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763312a3b250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00123043 -0.000596169 0.0215413 ... 0.0221685 -0.0141856 0.0139301]
+gamma:<N9nntrainer6TensorE at 0x60bff57f05a0>
+data addr: 0x763e37f7a810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00364685 0.0196533 0.0209961 ... 0.0306396 0.026123 -0.0317383]
+
+layer29_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763313a3b250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0614337 0.0418464 0.00999935 ... 0.00835611 -0.0519466 -0.0155962]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763313e3b250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00730448 0.102243 0.0141739 ... -0.01085 -0.00680989 0.00644349]
+gamma:<N9nntrainer6TensorE at 0x60bff5915410>
+data addr: 0x763e3897aa10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00311279 0.0639648 0.0371094 ... -0.0349121 0.00352478 -0.0111084]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer30_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76332c23d250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0023566 -0.000997205 -0.046947 ... -0.0261053 0.00753318 0.0348385]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76332d23d250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00058081 -0.00132238 -0.0184311 ... -0.000717178 0.00258852 -0.0374679]
+gamma:<N9nntrainer6TensorE at 0x60bff5e8ae80>
+data addr: 0x763edb19f410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00689697 0.0371094 0.0109863 ... 0.000751495 0.00939941 -0.0294189]
+
+layer30_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76332e23d250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0110558 0.00609626 0.00236529 ... -0.0392354 -0.0394604 -0.0436211]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76332e63d250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.00212445 0.0013204 0.0010141 ... -0.0183123 -0.0012198 -0.00850833]
+gamma:<N9nntrainer6TensorE at 0x60bff606c540>
+data addr: 0x763edbb9f610
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00527954 0.00595093 0.0117798 ... 0.0327148 0.00216675 0.0136719]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer31_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763346a3f250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0142479 -0.0137788 1.66576e-05 ... -0.012389 0.0545897 -0.00423624]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763347a3f250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.0103534 0.0057572 2.45115e-05 ... -0.00476924 0.0482838 0.00363041]
+gamma:<N9nntrainer6TensorE at 0x60bff5f34060>
+data addr: 0x763ef32a4810
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0195312 -0.0112305 0.0395508 ... 0.0102539 0.0235596 -0.0228271]
+
+layer31_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763348a3f250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0256341 0.0355368 0.0384132 ... -0.0239309 0.0191231 0.0326253]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763348e3f250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.0185604 0.0152384 0.0139741 ... -0.0238531 -0.0101388 0.0128693]
+gamma:<N9nntrainer6TensorE at 0x60bff61ad510>
+data addr: 0x763f4fe64a10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0251465 0.0148926 0.0126343 ... 0.0286865 -0.0152588 0.0113525]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer32_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763361241250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.00970916 -0.0119311 -0.0259033 ... 0.0142684 0.02928 -0.0497111]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763362241250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00208105 0.00212897 0.00527856 ... 0.00429007 -0.0178404 0.0609743]
+gamma:<N9nntrainer6TensorE at 0x60bff5e91ef0>
+data addr: 0x763f67569c10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00619507 -0.00515747 -0.00588989 ... 0.00921631 -0.0186768 -0.0375977]
+
+layer32_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763363241250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0556109 0.00573828 -0.0688724 ... -0.0210996 -0.0109657 -0.00756395]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763363641250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.0262166 0.000167216 -0.0720728 ... 0.00306632 -0.00135705 0.000134721]
+gamma:<N9nntrainer6TensorE at 0x60bff606d2c0>
+data addr: 0x763f67f69e10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0222168 0.00137329 0.0493164 ... -0.00390625 0.00332642 -0.000478745]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer33_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76337ba43250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.00590432 0.0190342 0.0601538 ... 0.0185012 -0.0333282 0.0545991]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76337ca43250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.000332102 0.0283587 -0.0284925 ... 0.0479403 0.00250884 -0.0315704]
+gamma:<N9nntrainer6TensorE at 0x60bff5e56690>
+data addr: 0x763ea2892410
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.00159454 0.0422363 -0.0134277 ... 0.065918 -0.00191498 -0.0147095]
+
+layer33_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x76337da43250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[0.0365258 0.0580394 0.0403476 ... 0.0338328 0.045754 -0.000504057]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x76337de43250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.0385637 -0.0157473 0.00293015 ... -0.0239115 0.0323369 0.000457825]
+gamma:<N9nntrainer6TensorE at 0x60bff5bef8a0>
+data addr: 0x763ea1e92210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.0437012 -0.0112305 0.00300598 ... -0.0303955 0.0303955 -0.0390625]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer34_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763396245250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[0.0119936 -0.0451705 -0.0534196 ... 0.0180485 0.0450108 -0.021266]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763397245250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00117378 -0.0163296 -0.00504131 ... 0.00602245 -0.0385057 0.00573877]
+gamma:<N9nntrainer6TensorE at 0x60bff5cb0ce0>
+data addr: 0x763e8a78d010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00299072 0.0110474 0.00288391 ... 0.00909424 -0.0233154 -0.00735474]
+
+layer34_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x763398245250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0191545 -0.0381277 -0.0150446 ... -0.0114092 -0.0145834 -0.0164297]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x763398645250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[0.0127972 -0.00870206 0.0116746 ... -0.00528218 0.0042298 -0.00845674]
+gamma:<N9nntrainer6TensorE at 0x60bff66b0740>
+data addr: 0x763eb6d94e10
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.0196533 0.00671387 -0.0228271 ... 0.020752 -0.0130005 0.0230713]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+layer35_q_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7633b0a47250
+Shape: 1:1:32768:128 [ FP32 : NCHW ]
+[-0.0231962 0.00533628 -0.0502622 ... 0.0215444 0.0333268 0.00964783]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7633b1a47250
+Shape: 1:1:1024:4096 [ FP32 : NCHW ]
+[0.00754905 -0.00286038 0.0221307 ... 0.00566347 -0.0339341 -0.00125203]
+gamma:<N9nntrainer6TensorE at 0x60bff606fbb0>
+data addr: 0x763ece49a010
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[-0.010376 -0.0170898 -0.0140381 ... 0.00964355 -0.0373535 -0.00476074]
+
+layer35_k_norm 
+ input:<N9nntrainer6TensorE at 0x7fff186689e0>
+data addr: 0x7633b2a47250
+Shape: 1:1:8192:128 [ FP32 : NCHW ]
+[-0.0104071 -0.020124 0.0114152 ... 0.0309542 0.03683 0.00380962]
+output:<N9nntrainer6TensorE at 0x7fff18668a10>
+data addr: 0x7633b2e47250
+Shape: 1:1:1024:1024 [ FP32 : NCHW ]
+[-0.00223778 -0.00833669 0.0284637 ... 0.00174507 -0.00696338 -0.000836572]
+gamma:<N9nntrainer6TensorE at 0x60bff5d2e2f0>
+data addr: 0x763ecee9a210
+Shape: 1:1:1:128 [ FP32 : NCHW ]
+[0.00665283 0.0128174 0.0771484 ... 0.00174713 -0.00585938 -0.00680542]
+
+Entering Forwarding
+Entering forwarding
+Entering forwarding
+TieWordEmbedding::forwarding() entered - mode: lm_head
+<N9nntrainer6TensorE at 0x60bff35ed070>
+data addr: 0x763ef32a4a10
+Shape: 1:1:151936:2560 [ FP32 : NCHW ]
+[1 1 1 ... 1 1 1]
+<N9nntrainer6TensorE at 0x60bff5768a00>
+data addr: 0x7633cb249250
+Shape: 1:1:1:151936 [ FP32 : NCHW ]
+[0 0 0 ... 0 0 0]
+
+TieWordEmbedding::calcGradient() entered - mode: lm_head
+<N9nntrainer6TensorE at 0x60bff59e2c20>
+data addr: 0x7633ca848250
+Shape: 1:1:1024:2560 [ FP32 : NCHW ]
+[-0.00132203 -0.0108422 -0.0134718 ... -0.00810465 0.000884757 -0.0129893]
+<N9nntrainer6TensorE at 0x60bff35eb270>
+data addr: 0x7633cb371e50
+Shape: 1:1:151936:2560 [ FP32 : NCHW ]
+[-1.47176 -1.47176 -1.47176 ... 0 0 0]
+

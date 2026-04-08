@@ -38,8 +38,10 @@ public:
    * @brief Construct a TrainingDataGenerator
    * @param tokenizer Tokenizer to use for encoding text
    * @param seq_len Sequence length for training samples
+   * @param vocab_size Vocabulary size for one-hot representation
    */
-  TrainingDataGenerator(tokenizers::Tokenizer *tokenizer, unsigned int seq_len);
+  TrainingDataGenerator(tokenizers::Tokenizer *tokenizer, unsigned int seq_len,
+                        unsigned int vocab_size);
 
   /**
    * @brief Load training text from a file
@@ -59,6 +61,12 @@ public:
   unsigned int getNumSamples() const;
 
   /**
+   * @brief Limit the number of training samples
+   * @param max_samples Maximum number of samples to keep
+   */
+  void limitSamples(unsigned int max_samples);
+
+  /**
    * @brief Data generation callback for nntrainer's dataset API
    *
    * This is the callback signature expected by ml::train::createDataset
@@ -75,6 +83,7 @@ public:
 private:
   tokenizers::Tokenizer *tokenizer_;
   unsigned int seq_len_;
+  unsigned int vocab_size_;
   std::vector<std::vector<int>> samples_;
   unsigned int current_idx_;
 
