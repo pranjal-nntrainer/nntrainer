@@ -85,7 +85,7 @@ void EmbeddingLayer::setProperty(const std::vector<std::string> &values) {
 
 void EmbeddingLayer::forwarding(nntrainer::RunLayerContext &context,
                                 bool training) {
-  printf("EmbeddingLayer::forwarding() entered\n");
+
   nntrainer::Tensor &input_ = context.getInput(SINGLE_INOUT_IDX);
   unsigned int seq_len = input_.getDim().width();
   incremental_forwarding(context, 0, seq_len, training);
@@ -94,7 +94,7 @@ void EmbeddingLayer::forwarding(nntrainer::RunLayerContext &context,
 void EmbeddingLayer::incremental_forwarding(nntrainer::RunLayerContext &context,
                                             unsigned int from, unsigned int to,
                                             bool training) {
-  printf("EmbeddingLayer::incremental_forwarding() entered - from: %u, to: %u\n", from, to);
+
 
   /// @todo get input and output dimension from input_ and hidden itself
   unsigned int in_dim = std::get<nntrainer::props::InDim>(embedding_props);
@@ -163,12 +163,12 @@ void EmbeddingLayer::incremental_forwarding(nntrainer::RunLayerContext &context,
 }
 
 void EmbeddingLayer::calcDerivative(nntrainer::RunLayerContext &context) {
-  printf("EmbeddingLayer::calcDerivative() entered\n");
+
   // Embedding is the first layer; no gradient to propagate further back.
 }
 
 void EmbeddingLayer::calcGradient(nntrainer::RunLayerContext &context) {
-  printf("EmbeddingLayer::calcGradient() entered\n");
+
   nntrainer::Tensor &in = context.getInput(SINGLE_INOUT_IDX);
   const nntrainer::Tensor &dy = context.getIncomingDerivative(SINGLE_INOUT_IDX);
   nntrainer::Tensor &dweight = context.getWeightGrad(weight_idx);

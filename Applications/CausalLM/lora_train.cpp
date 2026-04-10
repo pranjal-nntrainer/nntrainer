@@ -23,10 +23,7 @@ namespace causallm {
 TrainingDataGenerator::TrainingDataGenerator(tokenizers::Tokenizer *tokenizer,
                                              unsigned int seq_len,
                                              unsigned int vocab_size) :
-  tokenizer_(tokenizer),
-  seq_len_(seq_len),
-  vocab_size_(vocab_size),
-  current_idx_(0) {}
+  tokenizer_(tokenizer), seq_len_(seq_len), vocab_size_(vocab_size), current_idx_(0) {}
 
 void TrainingDataGenerator::loadTextFile(const std::string &path) {
   std::ifstream file(path);
@@ -37,15 +34,14 @@ void TrainingDataGenerator::loadTextFile(const std::string &path) {
   std::string line;
   int count = 0;
   while (std::getline(file, line)) {
-    if (line.empty())
-      continue;
+    if (line.empty()) continue;
     auto ids = tokenizer_->Encode(line);
     samples_.push_back(ids);
     count++;
   }
 
-  std::cout << "[TrainingData] Loaded " << path
-            << " line by line, total: " << count << " samples." << std::endl;
+  std::cout << "[TrainingData] Loaded " << path << " line by line, total: " 
+            << count << " samples." << std::endl;
 }
 
 void TrainingDataGenerator::addTokenIds(const std::vector<int> &ids) {
@@ -108,10 +104,8 @@ int TrainingDataGenerator::dataCb(float **input, float **label, bool *last,
   }
 
   // Progress printing
-  if (self->current_idx_ % 100 == 0 || self->current_idx_ == 1) {
-    std::cout << "\r[DataGen] Sample " << self->current_idx_ << " / "
-              << self->samples_.size() << std::endl << std::flush;
-  }
+  std::cout << "[DataGen] Sample " << self->current_idx_
+            << " / " << self->samples_.size() << std::endl;
 
   self->current_idx_++;
   *last = false;

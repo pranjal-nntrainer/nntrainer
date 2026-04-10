@@ -126,7 +126,7 @@ void ReshapedRMSNormLayer::forwarding(nntrainer::RunLayerContext &context,
     unsigned int width       = in.getDim().width();
     unsigned int num_features = width / feature_size;
 
-    printf("Training entered\n");
+
     nntrainer::Tensor &inv_rms_tensor =
       context.getTensor(wt_idx[RMSParams::inv_rms]);
     float *inv_rms_data = inv_rms_tensor.getData<float>();
@@ -308,7 +308,7 @@ void ReshapedRMSNormLayer::updateTensorsByInputDimensions(
  * allocations, no const_cast, no in-place reshape of input/dy tensors.
  */
 void ReshapedRMSNormLayer::calcDerivative(nntrainer::RunLayerContext &context) {
-  printf("Using calc derivative\n");
+
   const nntrainer::Tensor &incoming_deriv =
     context.getIncomingDerivative(SINGLE_INOUT_IDX);
   nntrainer::Tensor &outgoing_deriv =
@@ -378,7 +378,7 @@ void ReshapedRMSNormLayer::calcDerivative(nntrainer::RunLayerContext &context) {
  * No recomputation of sqrt.
  */
 void ReshapedRMSNormLayer::calcGradient(nntrainer::RunLayerContext &context) {
-  printf("Using calc gradient\n");
+
   const nntrainer::Tensor &in  = context.getInput(SINGLE_INOUT_IDX);
   const nntrainer::Tensor &dy  = context.getIncomingDerivative(SINGLE_INOUT_IDX);
   nntrainer::Tensor &dgamma    = context.getWeightGrad(wt_idx[RMSParams::gamma]);

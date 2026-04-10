@@ -227,7 +227,7 @@ void MHACoreLayer::finalize(nntrainer::InitLayerContext &context) {
  */
 void MHACoreLayer::forwarding(nntrainer::RunLayerContext &context,
                               bool training) {
-  printf("Entering Forwarding\n");
+
   unsigned int gqa_size = num_heads_Q / num_heads_KV;
   nntrainer::Tensor &query = context.getInput(INOUT_INDEX::QUERY);
   nntrainer::Tensor &key = context.getInput(INOUT_INDEX::KEY);
@@ -1442,7 +1442,7 @@ void MHACoreLayer::updateTensorsByInputDimensions(
 }
 
 void MHACoreLayer::calcDerivative(nntrainer::RunLayerContext &context) {
-  printf("Entering Derivative\n");
+
   unsigned int gqa_size = num_heads_Q / num_heads_KV;
   const nntrainer::Tensor &incoming_deriv =
     context.getIncomingDerivative(INOUT_INDEX::OUTPUT);

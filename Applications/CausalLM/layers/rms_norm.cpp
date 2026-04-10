@@ -76,7 +76,7 @@ void RMSNormLayer::finalize(nntrainer::InitLayerContext &context) {
  */
 void RMSNormLayer::forwarding(nntrainer::RunLayerContext &context,
                               bool training) {
-  printf("Entering forwarding\n");
+
   nntrainer::Tensor &in = context.getInput(SINGLE_INOUT_IDX);
   unsigned int height = in.getDim().height();
 
@@ -102,7 +102,7 @@ void RMSNormLayer::forwarding(nntrainer::RunLayerContext &context,
 void RMSNormLayer::incremental_forwarding(nntrainer::RunLayerContext &context,
                                           unsigned int from, unsigned int to,
                                           bool training) {
-  printf("Entering inc_forwarding\n");
+
   auto &epsilon = std::get<nntrainer::props::Epsilon>(rms_props).get();
 
   nntrainer::Tensor &in      = context.getInput(SINGLE_INOUT_IDX);
@@ -210,7 +210,7 @@ void RMSNormLayer::updateTensorsByInputDimensions(
  * mean_val and inv_rms_sq are stack scalars per row — zero heap allocations.
  */
 void RMSNormLayer::calcDerivative(nntrainer::RunLayerContext &context) {
-  printf("Entering calc derivative\n");
+
   const nntrainer::Tensor &incoming_deriv =
     context.getIncomingDerivative(SINGLE_INOUT_IDX);
   nntrainer::Tensor &outgoing_deriv =
@@ -275,7 +275,7 @@ void RMSNormLayer::calcDerivative(nntrainer::RunLayerContext &context) {
  * row index to avoid redundant index arithmetic in the inner loop.
  */
 void RMSNormLayer::calcGradient(nntrainer::RunLayerContext &context) {
-  printf("Entering calc graident\n");
+
   const nntrainer::Tensor &in  = context.getInput(SINGLE_INOUT_IDX);
   const nntrainer::Tensor &dy  = context.getIncomingDerivative(SINGLE_INOUT_IDX);
   nntrainer::Tensor &dgamma    = context.getWeightGrad(wt_idx[RMSParams::gamma]);

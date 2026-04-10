@@ -112,7 +112,7 @@ void LmHeadLayer::setProperty(const std::vector<std::string> &values) {
 
 void LmHeadLayer::forwarding(nntrainer::RunLayerContext &context,
                              bool training) {
-  printf("Entering forwarding\n");
+
   nntrainer::Tensor &input_ = context.getInput(SINGLE_INOUT_IDX);
   unsigned int height = input_.getDim().height();
 
@@ -125,7 +125,7 @@ void LmHeadLayer::forwarding(nntrainer::RunLayerContext &context,
 void LmHeadLayer::incremental_forwarding(nntrainer::RunLayerContext &context,
                                          unsigned int from, unsigned int to,
                                          bool training) {
-  printf("Entering inc_forwarding\n");
+
   nntrainer::Tensor weight =
     context.getWeight(weight_idx[LmHeadParams::weight]);
 
@@ -173,7 +173,7 @@ void LmHeadLayer::incremental_forwarding(nntrainer::RunLayerContext &context,
 }
 
 void LmHeadLayer::calcDerivative(nntrainer::RunLayerContext &context) {
-  printf("Entering calc derivative\n");
+
   nntrainer::Tensor weight = context.getWeight(weight_idx[LmHeadParams::weight]);
   nntrainer::Tensor &dx = context.getOutgoingDerivative(SINGLE_INOUT_IDX);
   const nntrainer::Tensor &dy = context.getIncomingDerivative(SINGLE_INOUT_IDX);
@@ -183,7 +183,7 @@ void LmHeadLayer::calcDerivative(nntrainer::RunLayerContext &context) {
 }
 
 void LmHeadLayer::calcGradient(nntrainer::RunLayerContext &context) {
-  printf("Entering calc gradient\n");
+
   nntrainer::Tensor &in = context.getInput(SINGLE_INOUT_IDX);
   const nntrainer::Tensor &dy = context.getIncomingDerivative(SINGLE_INOUT_IDX);
   nntrainer::Tensor &dweight = context.getWeightGrad(weight_idx[LmHeadParams::weight]);

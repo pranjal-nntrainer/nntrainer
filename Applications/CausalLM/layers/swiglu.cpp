@@ -40,7 +40,7 @@ void SwiGLULayer::finalize(nntrainer::InitLayerContext &context) {
 
 void SwiGLULayer::forwarding(nntrainer::RunLayerContext &context,
                              bool training) {
-  printf("Entering forwarding\n");
+
   nntrainer::Tensor &in1 = context.getInput(INPUT_IDX_1);
   unsigned int height = in1.getDim().height();
 
@@ -53,7 +53,7 @@ void SwiGLULayer::forwarding(nntrainer::RunLayerContext &context,
 void SwiGLULayer::incremental_forwarding(nntrainer::RunLayerContext &context,
                                          unsigned int from, unsigned int to,
                                          bool training) {
-  printf("Entering inc_forwarding\n");
+
   nntrainer::Tensor &in1 = context.getInput(INPUT_IDX_1);
   nntrainer::Tensor &in2 = context.getInput(INPUT_IDX_2);
   nntrainer::Tensor &out = context.getOutput(OUT_IDX);
@@ -104,7 +104,7 @@ void SwiGLULayer::updateTensorsByInputDimensions(
 }
 
 void SwiGLULayer::calcDerivative(nntrainer::RunLayerContext &context) {
-  printf("Entering calc derivative\n");
+
   const nntrainer::Tensor &incoming_deriv = context.getIncomingDerivative(OUT_IDX);
   nntrainer::Tensor &d_gate = context.getOutgoingDerivative(INPUT_IDX_1);
   nntrainer::Tensor &d_up = context.getOutgoingDerivative(INPUT_IDX_2);
